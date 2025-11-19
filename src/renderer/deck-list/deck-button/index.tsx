@@ -7,18 +7,17 @@ import { useState } from 'react';
 
 export const DeckButton = ({deck}) => {
   const {changeDeckOn} = useDataContext();
-  const {deck_data} = deck;
-  const {deck_name, on} = deck_data;
+  const {name, id, backgroundColor, on} = deck;
 
   return (
-    <Link to={`/${deck.unique_id}`} className={style.link}>
+    <Link to={`/${id}`} className={style.link}>
       <Stack className={classnames(style['deck-button'], {[style.off]: !on})} justify='space-between' gap='sm'>
-        <Text ta='center' fw='bold' size='xl'>{deck_name}</Text>
-        <Text className={style['deck-preview']}>
+        <Text ta='center' fw='bold' size='xl'>{name}</Text>
+        <Text className={style['deck-preview']} bg={backgroundColor}>
         </Text>
         <div
           onClick={(e) => {
-            changeDeckOn(deck.unique_id);
+            changeDeckOn(id);
             e.preventDefault();
           }}
         >

@@ -7,7 +7,7 @@ export const DeckList = () =>  {
   const {decks} = useDataContext();
   return (
     <div className={style.grid}>
-      {decks.map((deck) => (<DeckButton deck={deck} key={deck.unique_id} />))}
+      {decks.map((deck) => (<DeckButton deck={deck} key={deck.id} />))}
       <NewDeckButton />
     </div>
   );

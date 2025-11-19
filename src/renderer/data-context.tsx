@@ -1,6 +1,8 @@
 import { v4 as uuidv4 } from 'uuid';
 import { createContext, useState, useContext, useCallback } from 'react';
-import { FAKEDATA } from './FAKE-DATA';
+import { FAKEDATA } from './FAKE-DATAXD';
+
+const FAKE_VERSION = '0.0.1',
 
 const DataContext = createContext({});
 
@@ -11,38 +13,29 @@ export function DataContextProvider({ children }) {
     setDecks([
       ...decks,
       {
-        deck_data: {
-          background_color: 4210752.0,
-          on: true,
-          grid_y: 10.0,
-          snap_grid: 1.0,
-          background_image: '',
-          encrypted: false,
-          adaptive_resizing: 1.0,
-          unique_id: `${uuidv4()}`,
-          button_list: [],
-          deck_name: 'Deck 2',
-          grid_x: 10.0,
-          stretch: 0.0,
+        id: `${uuidv4()}`,
+        name: 'New Deck',
+        dimensions: {
+          x: 10,
+          y: 10,
         },
-        unique_id: `${uuidv4()}`,
-        include_image: {},
+        backgroundColor: '#404040',
+        on: true,
+        createdWithVersion: FAKE_VERSION,
+        buttons: [],
       },
     ]);
   }, [decks]);
 
   const changeDeckOn = useCallback(
-    (deck_id) => {
+    (id) => {
       const newDecks = JSON.parse(JSON.stringify(decks)).map((d) => {
-        if (d.unique_id !== deck_id) {
+        if (d.id !== id) {
           return d;
         }
         return {
           ...d,
-          deck_data: {
-            ...d.deck_data,
-            on: !d.deck_data.on,
-          },
+          on: !d.on,
         };
       });
       setDecks(newDecks);
