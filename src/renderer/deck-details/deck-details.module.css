@@ -1,0 +1,16 @@
+.header {
+  flex-shrink: none;
+}
+
+.deck-details {
+  background: var(--mantine-color-gray-8);
+  color: var(--mantine-color-white);
+  height: 100%;
+  width: 100%;
+}
+
+.button-grid {
+  background: var(--mantine-color-gray-9);
+  gap: var(--mantine-spacing-sm);
+  flex-grow: 1;
+}

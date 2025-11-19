@@ -1,0 +1,24 @@
+.link {
+  text-decoration: none;
+  width: 200px;
+  height: 200px;
+}
+
+.deck-button {
+  border-radius: 15px;
+  padding: var(--mantine-spacing-md);
+  background: var(--mantine-color-gray-8);
+  width: 200px;
+  height: 200px;
+  color: var(--mantine-color-white);
+}
+
+.deck-button.off {
+  background: var(--mantine-color-red-8);
+}
+
+.deck-preview {
+  width: 100%;
+  height: 100px;
+  background: var(--mantine-color-blue-1);
+}

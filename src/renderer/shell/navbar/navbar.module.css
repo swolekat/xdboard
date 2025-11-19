@@ -1,0 +1,4 @@
+.navbar {
+  background: var(--mantine-color-gray-9);
+  color: var(--mantine-color-white);
+}

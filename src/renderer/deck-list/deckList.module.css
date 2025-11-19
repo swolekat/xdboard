@@ -1,0 +1,12 @@
+.grid {
+  padding: var(--mantine-spacing-lg);
+  height: 100%;
+  width: 100%;
+  background-color: var(--mantine-color-blue-9);
+  gap: var(--mantine-spacing-md);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+
