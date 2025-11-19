@@ -8,17 +8,17 @@ import { DeckDetails } from './deck-details';
 
 export default function App() {
   return (
-    <MantineProvider theme={theme}>
-      <DataContextProvider>
-        <Shell>
-          <Router>
+    <Router>
+      <MantineProvider theme={theme}>
+        <DataContextProvider>
+          <Shell>
             <Routes>
               <Route index element={<DeckList />} />
               <Route path=":deckId" element={<DeckDetails />} />
             </Routes>
-          </Router>
-        </Shell>
-      </DataContextProvider>
-    </MantineProvider>
+          </Shell>
+        </DataContextProvider>
+      </MantineProvider>
+    </Router>
   );
 }

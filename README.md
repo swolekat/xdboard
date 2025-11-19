@@ -53,7 +53,7 @@ I want XDBoard to be written in electron as the main technology. Using electron 
 
 Used https://github.com/electron-react-boilerplate/electron-react-boilerplate as a starting point.
 
-All command processing should be done on the electron side NOT the 
+All command processing should be done on the electron side NOT the client side
 
 ## General Notes
 * Because it's in electron, I don't think we need a bridge.

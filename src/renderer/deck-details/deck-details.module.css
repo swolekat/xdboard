@@ -9,8 +9,27 @@
   width: 100%;
 }
 
-.button-grid {
-  background: var(--mantine-color-gray-9);
-  gap: var(--mantine-spacing-sm);
+.grids-wrapper {
   flex-grow: 1;
+  position: relative;
+  background: var(--mantine-color-gray-9);
+  flex-grow: 1;
+}
+
+.empty-grid {
+  display: grid;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.button-grid {
+  display: grid;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
 }
